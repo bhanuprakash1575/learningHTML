@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Style to move the marker to the end */
+
+    /* Additional styling for demonstration purposes */
+    summary {
+      background-color: #f0f0f0;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    .marker{
+        transform: translateY(30%);
+        height: 5%;
+        border: 12px solid transparent;
+        border-top-color: black;
+
+    }
+    p {
+      margin: 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <details>
+    <summary>Click me <div class="marker"></div></summary>
+    <p>This is some content inside the details block.</p>
+  </details>
+
+</body>
+</html>

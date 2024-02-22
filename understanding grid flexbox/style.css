@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.game-container{
+    width: 1000px;
+    height: 1000px;
+    background-color: aquamarine;
+    border: 2px solid red;
+    display: grid;
+    grid-template-rows: 100px;
+
+    & .box{
+        width: 100px;
+        border: 2px solid black;
+        aspect-ratio: 1;
+        background-color: azure;
+    }
+}

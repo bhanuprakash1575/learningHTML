@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: bisque;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 800px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            & img{
+                width: 100%;
+                height: 100%;
+               
+            }
+
+            & .description{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-image: linear-gradient(to top,rgb(0, 0, 0),rgb(0,0,0,0));
+                transition: all .3s linear;
+                
+            }
+
+            &:hover{
+                & .description{
+                    transform: translateY(-100%);
+                }
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/finalproject/images/img-1.jpg" alt="">
+        <div class="description">this picture tells about nature of the world</div>
+
+    </div>
+</body>
+</html>

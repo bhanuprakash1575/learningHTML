@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container{
+            width: 250px;
+            aspect-ratio: 1;
+            border: 5px solid black;
+            border-radius: 50%;
+            overflow: hidden;
+            perspective: 1000px;
+            animation: rotation 5s linear;
+        }
+
+        img{
+            width: 100%;
+           animation: loading 5s linear;
+        }
+
+        @keyframes loading {
+            0%{
+                filter: blur(70px);
+                
+            }
+            100%{
+                filter: blur(0px);
+            }
+        }
+
+        @keyframes rotation {
+            0%{
+                transform: rotatey(0deg);
+            }
+
+            100%{
+                transform: rotateY(360deg);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <img src="/photoloading/profile-photo.png" alt="">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: skyblue;
+    display: grid;
+    place-items: center;
+    animation: eclipseeffect 10s linear 10s infinite;
+}
+
+
+.circle{
+    width: 300px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 30px 10px white;
+    position: relative;
+    overflow: hidden;
+    
+    
+}
+
+@keyframes eclipseeffect {
+    0%{
+        background-color: skyblue;
+    }
+    25%{
+        background-color: navy;
+
+    }
+    50%{
+        background-color: black;
+    }
+    75%{
+        background-color: navy;   
+    }
+    100%{
+        background-color: skyblue;
+    }
+}
+
+.circle::after{
+    content: "";
+    width: 280px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: black;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    left: 150%;
+    
+    animation: eclipse 10s ease-in-out 10s infinite;
+
+}
+@keyframes eclipse {
+    0%{
+        left:150%;
+    }
+    50%{
+        left:50%;
+      
+    }
+    100%{
+        left:-50%;
+    }
+}

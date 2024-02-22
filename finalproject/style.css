@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html{
+    font-size: 10px;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+
+}
+.container{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border: 2px solid red;
+}
+
+.grid{
+    display: grid;
+    place-items: center;
+    gap: 20px;
+}
+
+.grid-two--cols{
+    grid-template-columns: repeat(2,1fr);
+}
+.grid-three--cols{
+    grid-template-columns: repeat(3,1fr);
+}
+
+.grid-four--cols{
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+
+
+/* header section*/
+.container .logo{
+    justify-self: start;
+    text-align: center;
+    font-size: 2rem;
+    border: 2px solid red;
+    letter-spacing: 0.9rem;
+    
+}
+.container .first-name{
+    font-size: 3rem;
+    letter-spacing: 1rem;
+}
+.container .navbar ul{
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    word-spacing: .2rem;
+    width: 50rem;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    border: 2px solid red;
+}
+
+/* header section*/
+
+/*main section*/
+
+.hero-section .hero-image img{
+    width: 100%;
+}
+
+/*main section*/
+
+/*about section*/
+
+.about-section .second-block .profile-photo{
+    width: 70%;
+    height: 70%;
+    border-radius: 57% 43% 80% 20% / 39% 78% 22% 61% ;
+    border: 3px solid black;
+    animation: jelly 8s ease-in infinite alternate-reverse ;
+}
+
+@keyframes jelly {
+    0%{
+        border-radius: 35% 65% 35% 65% / 63% 26% 74% 37%   ;
+    }
+    25%{
+            border-radius:39% 61% 35% 65% / 58% 65% 35% 42%  ;
+    }
+    50%{
+            border-radius: 68% 32% 58% 42% / 58% 65% 35% 42% ;
+    }
+    75%{
+        border-radius: 68% 32% 76% 24% / 26% 69% 31% 74% ;
+    }
+    100%{
+       border-radius:  35% 65% 35% 65% / 63% 26% 74% 37%  ;
+    }
+    
+}
+/*about section*/
+/*
+21% 79% 63% 37% / 25% 27% 73% 75% 
+67% 33% 72% 28% / 25% 56% 44% 75% 
+/*skills section*/
+
+.skills-section .block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .icon{
+        width: 4rem;
+        aspect-ratio: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: teal;
+        border-radius: 10%;
+    }
+}
+/*skills section*/
+
+/*project section*/
+/* .project-section{
+    padding: 0rem  1.5rem;
+} */
+.project-section .project-container{
+    width: 90%;
+    height: 90%;
+    background-color: transparent;
+    border-radius: 1%;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+ .project-section .project-container  .slider-container{
+    content: "";
+    width: 100rem;
+    height: 90%;
+    background-color:  black;
+    border-radius: 1%;
+    display: grid;
+    grid-template-columns: repeat(3,minmax(100rem,1fr));
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth !important;
+    
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+
+    & .slide{
+        width: 100%;
+        scroll-snap-align: start;
+        scroll-behavior: smooth;
+    }
+    & img{
+        width: 100%;
+        height: 90%;
+    }
+
+}
+
+/* contact section*/
+
+
+
+
+
+
+
+
+/* contact section*/
+
+
+
+
+
+
+
+
+/*project section*/
+
+
+/*media queries*/
+@media (width <= 840px){
+    .container{
+        width: 90%;
+    }
+    .grid-two--cols{
+        grid-template-columns: 1fr;
+    }
+    .grid-three--cols{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-section  .second-block{
+        grid-area: 1/1/2/3;
+    }
+    .container .logo{
+        justify-self: center;
+    }
+    .project-section .project-container{
+        height: 50rem;
+    }
+}
+
+@media (width<=440px){
+    .container{
+        width: 100%;
+    }
+    html{
+        font-size: 10px;
+    }
+    header .grid-two--cols{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .grid-three--cols{
+        grid-template-columns: 1fr;
+    }
+    .about-section .second-block{
+        grid-area: 1/1/2/2;
+    }
+    .container .logo{
+        justify-self: start;
+    }
+    .container .navbar ul{
+        display: none;
+    }
+
+    .container .navbar{
+        width: 7rem;
+        aspect-ratio: 1;
+        background-color: blue;
+        border-radius: 20%;
+        justify-self: end;
+        align-self: center;
+    }
+
+    .project-section .project-container{
+        width: 34rem;
+        height: 34rem;
+        background-color:transparent;
+        border-radius: 50%;
+        position: relative;
+        border: 2px solid blue;
+    }
+    .project-section .project-container:after{
+        content: "";
+        width: 28rem;
+        height: 28rem;
+        border-radius: 50%;
+        background-color: blueviolet;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+    }
+
+    .project-section .project-container .planets{
+        display: grid;
+        place-items: center;
+        width:5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background-color: red;
+        position: absolute;
+        animation: revolve 10s linear infinite ;
+    }
+
+    .project-section .project-container .planet-1{
+        top: 50%;
+        transform: translate(-50%,-50%);
+        transform-origin:  17rem 0rem;
+    
+    }
+    .project-section .project-container .planet-2{
+        left: 50%;
+        transform: translate(-50%,-50%);
+        transform-origin:  0rem 17rem;
+       
+    }
+    .project-section .project-container .planet-3{
+        top: 50%;
+        left: 100%;
+        transform: translate(-50%,-50%);
+        transform-origin:  -17rem 0rem;
+       
+    }
+    .project-section .project-container .planet-4{
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        transform-origin:  0rem -17rem;
+        
+    }
+    .project-section .project-container .planets p{
+        animation: fix 10s linear  infinite;
+    }
+
+    @keyframes fix {
+        0%{
+            rotate: 0deg;
+        }
+        100%{
+            rotate: -360deg;
+        }
+        
+    }
+
+    @keyframes revolve {
+        0%{
+            rotate: 0deg;
+        }
+        100%{
+            rotate: 360deg;
+        }
+        
+    }
+}
+
+
+
+/*media queries*/

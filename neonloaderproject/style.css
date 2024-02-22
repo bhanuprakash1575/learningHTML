@@ -1,0 +1,40 @@
+body{
+    /* width:100%;*/
+    height: 100vh; 
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+div{
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color:black;
+    box-shadow: 15px 0px 0px 8px red;
+    position: relative;
+    animation: rotation 2s linear infinite;
+}
+
+div::after{
+    content:"";
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 0 0 10px 8px red;
+    position: absolute;
+    top:10%;
+}
+
+@keyframes rotation {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate:-360deg;
+    }
+}
+
